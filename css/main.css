@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: green;
+  overflow: hidden;
+}
+
+.road {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.road__street {
+  position: relative;
+  width: 40%;
+  height: 100vh;
+  background-color: black;
+}
+
+.road__street-line1 {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 4px;
+  height: 100vh;
+  background-color: white;
+}
+
+.road__street-line2 {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 4px;
+  height: 100vh;
+  background-color: white;
+}
+
+.road__street .pobocze {
+  position: absolute;
+  top: 0;
+  right: -20%;
+  width: 20%;
+  height: 100vh;
+  background-color: brown;
+}
+
+.road .car {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 40%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  -webkit-animation: GoingDown 11s infinite;
+          animation: GoingDown 11s infinite;
+}
+
+.road .bazant {
+  position: absolute;
+  left: 20%;
+}
+
+.road .tree {
+  position: absolute;
+  top: -100%;
+  left: 2%;
+  z-index: 1000;
+  -webkit-animation: trees 30s linear infinite;
+          animation: trees 30s linear infinite;
+}
+
+.road .tree-left {
+  position: absolute;
+  right: 0;
+  top: -200%;
+  z-index: 1000;
+  -webkit-animation: trees 30s linear infinite;
+          animation: trees 30s linear infinite;
+}
+
+.road .walec {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  z-index: 100;
+}
+
+@-webkit-keyframes trees {
+  to {
+    top: 120%;
+  }
+}
+
+@keyframes trees {
+  to {
+    top: 120%;
+  }
+}
+
+@-webkit-keyframes GoingDown {
+  0% {
+    top: -40%;
+  }
+  20% {
+    top: 10%;
+  }
+  100% {
+    top: 120%;
+  }
+}
+
+@keyframes GoingDown {
+  0% {
+    top: -40%;
+  }
+  20% {
+    top: 10%;
+  }
+  100% {
+    top: 120%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
