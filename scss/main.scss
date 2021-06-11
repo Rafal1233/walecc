@@ -11,6 +11,10 @@ body {
     overflow: hidden;
 }
 
+main {
+    position: relative;
+}
+
 .road {
     position: relative;
     display: flex;
@@ -95,8 +99,10 @@ body {
         position: absolute;
         right: 20px;
         top: 50%;
-        transform: translateX(50%);
+
+        transform: translateX(0%);
         z-index: 100;
+
     }
 }
 
@@ -131,3 +137,35 @@ body {
 //         left: 40%;
 //     }
 // }
+.end {
+    display: flex;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 120px;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000000;
+    background-color: rgba(0, 0, 0, .8);
+
+}
+
+.ending {
+    animation: end 5s forwards;
+}
+
+@keyframes end {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1
+    }
+
+}
